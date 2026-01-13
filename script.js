@@ -1,9 +1,13 @@
 const { jsPDF } = window.jspdf;
 
 const moduleData = {
-    DS: { code: "ITU07313", lecturer: "DR. AHMED KIJAZI" },
-    DB: { code: "CS305", lecturer: "Mr. M. David" },
-    OS: { code: "CS310", lecturer: "Dr. S. Peter" }
+    DSA: { code: "ITU07313", lecturer: "DR. AHMED KIJAZI" },
+    DMA: { code: "ITU07307", lecturer: "MLEKWA KIKWEMBO" },
+    EI: { code: "BAU07313", lecturer: "LUSAKO MWAKILUMA"},
+    MS: { code: "ITU07311", lecturer: "KELVIN MBUYA"},
+    PJ: { code: "ITU07312", lecturer: "Dr. AHMED KIJAZI"},
+    MC: { code: "ITU07314", lecturer: "JOSEPH HAULE"}
+
 };
 
 const membersBody = document.getElementById("members");
