@@ -14,7 +14,7 @@ body {
 .app {
     background: white;
     width: 90%;
-    height: auto;
+    height: 90%;
     padding: 25px;
     border-radius: 16px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.3);
