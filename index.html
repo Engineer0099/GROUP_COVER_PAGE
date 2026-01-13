@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Group Cover Page Generator</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+    <h1><i class="fa-solid fa-users"></i> Group Cover Page</h1>
+
+    <form id="groupForm">
+
+        <div class="field">
+            <label>Course</label>
+            <select id="course" required>
+                <option value="">Select Course</option>
+                <option>BACHELOR OF INFORMATION TECHNOLOGY</option>
+                <!-- <option>BBA</option>
+                <option>BCOM</option> -->
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Module Name</label>
+            <select id="moduleName" required>
+                <option value="">Select Module</option>
+                <option value="DS">Data Structure and algorithims</option>
+                <!-- <option value="DB">Database Systems</option>
+                <option value="OS">Operating Systems</option> -->
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Module Code</label>
+            <input id="moduleCode" readonly>
+        </div>
+
+        <div class="field">
+            <label>Lecturer Name</label>
+            <input id="lecturerName" readonly>
+        </div>
+
+        <div class="field">
+            <label>Submission Date</label>
+            <input type="date" id="submissionDate" required>
+        </div>
+
+        <div class="field">
+            <label>Stream</label>
+            <input id="stream" required>
+        </div>
+
+        <div class="field">
+            <label>Group No</label>
+            <input id="groupNo" required>
+        </div>
+
+        <h3>Group Members</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>S/N</th>
+                    <th>Member Name</th>
+                    <th>Registration Number</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="members"></tbody>
+        </table>
+
+        <button type="button" class="add" onclick="addMember()">
+            <i class="fa-solid fa-plus"></i> Add Member
+        </button>
+
+        <div class="actions">
+            <button type="button" onclick="previewPDF()">Preview</button>
+            <button type="submit">Generate PDF</button>
+        </div>
+    </form>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div id="preview">
+    <div class="preview-box">
+        <h2>Preview</h2>
+        <div id="previewContent"></div>
+        <button onclick="closePreview()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
