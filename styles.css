@@ -7,18 +7,17 @@ body {
     background: linear-gradient(135deg, #1c2e4a, #2c5364);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 
 .app {
     background: white;
-    width: 90%;
-    height: 90%;
-    padding: 25px;
+    width: 460px;
+    padding: 30px;
     border-radius: 16px;
     box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-    animation: fadeIn 0.7s ease;
+    animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn {
@@ -32,13 +31,115 @@ h1 {
 }
 
 .field {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
 label {
     font-weight: 600;
     font-size: 13px;
+    color: #333;
 }
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #003366;
+    box-shadow: 0 0 6px rgba(0,51,102,0.4);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:first-child {
+    background: #777;
+    color: white;
+}
+
+button:last-child {
+    background: #003366;
+    color: white;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== PREVIEW MODAL ===== */
+#previewModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-box {
+    background: white;
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.4s ease;
+}
+.group-section {
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.sub-title {
+    margin: 15px 0 10px;
+    color: #003366;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 13px;
+}
+
+th {
+    background: #f0f4f8;
+}
+
+.add-btn {
+    background: #2c5364;
+    color: white;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+
 
 input, select {
     width: 100%;
